@@ -8,8 +8,64 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 RewriteRule ^directory/ - [L,R=404]
 
 
-RewriteRule ^mahasiswa$ media.php?module=mahasiswa
-RewriteRule ^tambah-mahasiswa$ media.php?module=mahasiswa&act=tambah
-RewriteRule ^edit-mahasiswa$ media.php?module=mahasiswa&edt=edit [QSA]
+# buku
+RewriteRule ^buku$ media.php?module=buku
+RewriteRule ^tambah-buku$ media.php?module=buku&act=tambah
+RewriteRule ^simpan-buku$ content/buku/aksisimpan.php?act=simpan
+
+RewriteRule ^edit-buku$ media.php?module=buku&act=edit [QSA]
+RewriteRule ^edit-buku$ content/buku/edit.php?id [QSA]
+RewriteRule ^simpan-edit-buku$ content/buku/aksiedit.php?act=simpan
+
+RewriteRule ^hapus-buku$ media.php?module=buku&act=hapus&id [QSA]
+RewriteRule ^hapus-buku$ content/buku/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-buku$ content/buku/aksihapus.php?act=simpan
+
+# petugas
+RewriteRule ^petugas$ media.php?module=petugas
+RewriteRule ^tambah-petugas$ media.php?module=petugas&act=tambah
+RewriteRule ^simpan-petugas$ content/petugas/aksisimpan.php?act=simpan
+
+RewriteRule ^edit-petugas$ media.php?module=petugas&act=edit [QSA]
+RewriteRule ^edit-petugas$ content/petugas/edit.php?id [QSA]
+RewriteRule ^simpan-edit-petugas$ content/petugas/aksiedit.php?act=simpan
+
+RewriteRule ^hapus-petugas$ media.php?module=petugas&act=hapus [QSA]
+RewriteRule ^hapus-petugas$ content/petugas/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-petugas$ content/petugas/aksihapus.php?act=simpan
+
+# anggota
+RewriteRule ^anggota$ media.php?module=anggota
+RewriteRule ^tambah-anggota$ media.php?module=anggota&act=tambah
+RewriteRule ^simpan-anggota$ content/anggota/aksisimpan.php?act=simpan
+
+RewriteRule ^edit-anggota$ media.php?module=anggota&act=edit [QSA]
+RewriteRule ^edit-anggota$ content/anggota/edit.php?id [QSA]
+RewriteRule ^simpan-edit-anggota$ content/anggota/aksiedit.php?act=simpan
+
+RewriteRule ^hapus-anggota$ media.php?module=anggota&act=hapus&id [QSA]
+RewriteRule ^hapus-anggota$ content/anggota/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-anggota$ content/anggota/aksihapus.php?act=simpan
+
+# pinjam
+RewriteRule ^pinjam$ media.php?module=pinjam
+RewriteRule ^tambah-pinjam$ media.php?module=pinjam&act=tambah
+RewriteRule ^simpan-pinjam$ content/pinjam/aksisimpan.php?act=simpan
+
+RewriteRule ^edit-pinjam$ media.php?module=pinjam&act=edit [QSA]
+RewriteRule ^edit-pinjam$ content/pinjam/edit.php?id [QSA]
+RewriteRule ^simpan-edit-pinjam$ content/pinjam/aksisimpan.php?act=simpan
+
+RewriteRule ^hapus-pinjam$ media.php?module=pinjam&act=hapus [QSA]
+RewriteRule ^hapus-pinjam$ content/pinjam/hapus.php?id [QSA]
+RewriteRule ^simpan-hapus-pinjam$ content/pinjam/aksihapus.php?act=simpan
+
+# kembali
+RewriteRule ^kembali$ media.php?module=kembali
+RewriteRule ^edit-kembali$ media.php?module=edit-kembali
+RewriteRule ^simpan-edit-kembali$ media.php?module=simpanedit
+
+
+RewriteRule ^keluar$ logout.php
 
 </IfModule>
